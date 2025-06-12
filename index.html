@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos Contables y Fiscales</title>
+  <style>
+    /* Reset básico y fuente */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(45deg, #1e3c72, #2a5298);
+      color: #fff;
+    }
+
+    /* Encabezado */
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    
+    header p {
+      font-size: 1.2em;
+      margin: 0;
+    }
+
+    /* Contenedor de tarjetas */
+    .section-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 50px 20px;
+    }
+
+    /* Tarjetas para cada proyecto */
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      padding: 20px;
+      margin: 15px;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    }
+
+    .card h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+    
+    .card p {
+      font-size: 1em;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    /* Botones */
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      color: #ffffff;
+      background: #ff9800;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #e68900;
+      transform: translateY(-3px);
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    footer a {
+      color: #ff9800;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Animación de entrada */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeIn 0.8s ease-out both;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proyectos Contables y Fiscales</h1>
+    <p>Innovando en herramientas para el análisis contable y fiscal</p>
+  </header>
+
+  <div class="section-container">
+    <div class="card">
+      <h2>Lector XML</h2>
+      <p>Extrae y procesa datos contables y fiscales de archivos XML de forma rápida y precisa.</p>
+      <a href="https://ariochito.github.io/lectorxml/" class="btn">Acceder al Lector XML</a>
+    </div>
+    <div class="card">
+      <h2>Complemento de Combustible</h2>
+      <p>Analiza el complemento de combustible para garantizar el cumplimiento de normas fiscales.</p>
+      <a href="https://ariochito.github.io/ComplementoCombustible/" class="btn">Acceder al Complemento</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 | Desarrollado por <a target="_blank" href="https://github.com/Ariochito">Ariochito</a>
+  </footer>
+</body>
+</html>
