@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Proyectos Contables y Fiscales</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Descubre herramientas innovadoras para el análisis de datos contables y fiscales. Facilita tu gestión fiscal con nuestros proyectos personalizados." />
+  <title>Proyectos Contables y Fiscales | Herramientas para análisis fiscal y contable</title>
   <style>
-    /* Reset básico y fuente */
     html, body {
       margin: 0;
       padding: 0;
@@ -14,7 +14,6 @@
       color: #fff;
     }
 
-    /* Encabezado */
     header {
       text-align: center;
       padding: 50px 20px;
@@ -28,33 +27,35 @@
       margin-bottom: 10px;
       text-transform: uppercase;
     }
-    
+
     header p {
       font-size: 1.2em;
       margin: 0;
     }
 
-    /* Contenedor de tarjetas */
+    main {
+      padding: 40px 20px;
+    }
+
     .section-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 50px 20px;
+      gap: 20px;
     }
 
-    /* Tarjetas para cada proyecto */
-    .card {
+    article.card {
       background: rgba(255, 255, 255, 0.1);
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 10px;
       padding: 20px;
-      margin: 15px;
       width: 300px;
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.8s ease-out both;
     }
 
-    .card:hover {
+    article.card:hover {
       transform: scale(1.05);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
     }
@@ -63,14 +64,13 @@
       font-size: 1.8em;
       margin-bottom: 10px;
     }
-    
+
     .card p {
       font-size: 1em;
       margin-bottom: 20px;
       line-height: 1.5;
     }
 
-    /* Botones */
     .btn {
       display: inline-block;
       padding: 12px 20px;
@@ -87,14 +87,51 @@
       transform: translateY(-3px);
     }
 
-    /* Pie de página */
+    .donate-container {
+      text-align: center;
+      margin-top: 40px;
+      padding: 30px 20px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      animation: fadeIn 0.8s ease-out both;
+    }
+
+    .donate-container h2 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      color: #ffd700;
+    }
+
+    .donate-container p {
+      font-size: 1em;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .paypal-btn {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .paypal-btn img {
+      width: 200px;
+      height: auto;
+    }
+
+    .paypal-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
     footer {
       text-align: center;
       padding: 20px;
       background: rgba(0, 0, 0, 0.5);
-      position: fixed;
-      bottom: 0;
-      width: 100%;
+      margin-top: 40px;
     }
 
     footer a {
@@ -103,7 +140,6 @@
       font-weight: bold;
     }
 
-    /* Animación de entrada */
     @keyframes fadeIn {
       from {
         opacity: 0;
@@ -115,8 +151,20 @@
       }
     }
 
-    .card {
-      animation: fadeIn 0.8s ease-out both;
+    @media (max-width: 600px) {
+      .section-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      article.card {
+        width: 90%;
+      }
+
+      .paypal-btn img {
+        width: 100%;
+        max-width: 250px;
+      }
     }
   </style>
 </head>
@@ -126,21 +174,43 @@
     <p>Innovando en herramientas para el análisis contable y fiscal</p>
   </header>
 
-  <div class="section-container">
-    <div class="card">
-      <h2>Lector XML</h2>
-      <p>Extrae y procesa datos contables y fiscales de archivos XML de forma rápida y precisa.</p>
-      <a href="https://ariochito.github.io/lectorxml/" class="btn">Acceder al Lector XML</a>
+  <main>
+    <section class="section-container">
+      <article class="card">
+        <h2>Lector XML</h2>
+        <p>Extrae y procesa datos contables y fiscales de archivos XML de forma rápida y precisa.</p>
+        <a href="https://ariochito.github.io/lectorxml/" class="btn" >Acceder al Lector XML</a>
+      </article>
+
+      <article class="card">
+        <h2>Complemento de Combustible</h2>
+        <p>Analiza el complemento de combustible para garantizar el cumplimiento de normas fiscales.</p>
+        <a href="https://ariochito.github.io/ComplementoCombustible/" class="btn" >Acceder al Complemento</a>
+      </article>
+    </section>
+
+    <div class="donate-container">
+      <h2>Apóyanos con una donación</h2>
+      <p>Tu contribución ayuda a mantener y mejorar estas herramientas.</p>
+      <button class="paypal-btn" onclick="abrirDonacion()">
+        <img src="https://www.paypalobjects.com/es_XC/MX/i/btn/btn_donateCC_LG.gif" 
+             alt="Donar con PayPal" />
+      </button>
     </div>
-    <div class="card">
-      <h2>Complemento de Combustible</h2>
-      <p>Analiza el complemento de combustible para garantizar el cumplimiento de normas fiscales.</p>
-      <a href="https://ariochito.github.io/ComplementoCombustible/" class="btn">Acceder al Complemento</a>
-    </div>
-  </div>
+  </main>
 
   <footer>
-    &copy; 2025 | Desarrollado por <a target="_blank" href="https://github.com/Ariochito">Ariochito</a>
+    &copy; 2025 | Desarrollado por <a href="https://github.com/Ariochito" target="_blank" rel="noopener noreferrer">Ariochito</a>
   </footer>
+
+  <script>
+    function abrirDonacion() {
+      window.open(
+        'https://www.paypal.com/donate/?hosted_button_id=VC2VJ83GRY832',
+        'Donar',
+        'width=600,height=700,scrollbars=yes,resizable=yes'
+      );
+    }
+  </script>
 </body>
 </html>
