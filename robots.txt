@@ -3,4 +3,4 @@ Disallow: /admin/
 Disallow: /login/
 Allow: /lectorxml/
 Allow: /ComplementoCombustible/
-Sitemap: https://ariochito.github.io/sitemap.xml
+Sitemap: https://ariochito.github.io/home/sitemap.xml
